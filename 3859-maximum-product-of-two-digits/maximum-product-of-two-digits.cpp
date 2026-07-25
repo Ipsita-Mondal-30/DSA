@@ -1,20 +1,20 @@
 class Solution {
 public:
     int maxProduct(int n) {
-        vector<int>result;
-        while(n>0){
-          result.push_back(n%10);
-        n=n/10;
-        }
-        int ans=0;
+        int largest=-1;
+        int seclargest=-1;
         
-      
-
-        for(int i=0;i<result.size();i++){
-            for(int j=i+1;j<result.size();j++){
-                ans=max(ans,result[i]*result[j]);
-            }
-        }
-        return ans;
+        while(n>0){
+        int digit=n%10;
+          if(digit>=largest){
+            seclargest=largest;
+            largest=digit;
+          }
+          else if(digit>seclargest){
+            seclargest=digit;
+          }
+            n/=10;
+    }
+        return largest*seclargest;
     }
 };

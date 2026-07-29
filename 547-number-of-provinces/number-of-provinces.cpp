@@ -17,7 +17,7 @@ void dfs( unordered_map<int,vector<int>>&adj,int u,vector<bool>&visited){
             for(int v=0;v<n;v++){
                 if(isConnected[u][v]==1){
                     adj[u].push_back(v);
-                    adj[v].push_back(u);
+                    
                 }
             }
         }

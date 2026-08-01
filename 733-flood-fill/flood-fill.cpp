@@ -8,7 +8,7 @@ public:
             int nrow=row+numrow[i];
             int ncols=col+numcols[i];
             if(nrow>=0&& nrow<n&& ncols>=0&& ncols<m&&
-            image[nrow][ncols]==var &&ans[nrow][ncols]!=color){
+            image[nrow][ncols]==var && ans[nrow][ncols]!=color){
                 dfs(nrow,ncols,ans,image,color,numrow,numcols,var);
             }
         }

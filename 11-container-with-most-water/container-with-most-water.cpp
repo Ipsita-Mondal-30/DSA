@@ -10,12 +10,7 @@ public:
             int area=h*(j-i);
             maxArea=max(area,maxArea);
 
-            if(height[i]<height[j]){
-                i++;
-            }
-            else{
-                j--;
-            }
+           (height[i]<height[j])?i++:j--;
         }
         return  maxArea;
     }

@@ -10,7 +10,7 @@ public:
             int area=h*(j-i);
             maxArea=max(area,maxArea);
 
-           (height[i]<height[j])?i++:j--;
+           (height[i]<height[j])?i++:j--;//ternary operator 
         }
         return  maxArea;
     }

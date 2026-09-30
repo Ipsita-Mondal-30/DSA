@@ -21,7 +21,7 @@ class Solution {
         int left=max(l,r)+root->val;
         int king=root->val;
      maxSum=max({maxSum,below,left,king});
-
+ 
      return max(left,king);
     }
 public:

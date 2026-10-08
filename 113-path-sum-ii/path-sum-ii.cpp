@@ -11,26 +11,23 @@
  */
 class Solution {
 public:
-vector<int>currentpath;
-vector<vector<int>>answer;
+vector<vector<int>>ans;
+        vector<int>current;
     vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
-        
-        
         if(root==NULL){
-            return answer;
+            return ans;
         }
         int sum=targetSum-root->val;
-        currentpath.push_back(root->val);
+        current.push_back(root->val);
         if(root->left==NULL && root->right==NULL){
-            if
-                (sum==0){
-          answer.push_back(currentpath);
+            if(sum==0){
+            ans.push_back(current);
             }
         }
-   
-        vector<vector<int>> leftS=pathSum(root->left,sum);
-        vector<vector<int>> rightS=pathSum(root->right,sum);
-        currentpath.pop_back();
-        return answer;
+        vector<vector<int>> lefts=pathSum(root->left,sum);
+        vector<vector<int>> rights=pathSum(root->right,sum);
+        current.pop_back();
+
+        return ans;
     }
 };

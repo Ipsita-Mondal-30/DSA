@@ -1,9 +1,8 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        int n=nums.size();
         unordered_map<int,int>mpp;
-        for(int i=0;i<n;i++){
+        for(int i=0;i<nums.size();i++){
             if(mpp.count(nums[i])){
                 return true;
             }
